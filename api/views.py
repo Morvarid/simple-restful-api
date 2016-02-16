@@ -12,18 +12,6 @@ from rest_framework.response import Response
 
 
 
-
-
-# class LookUpCreateReadView(ListCreateAPIView):
-# 
-#     queryset = PeoplePhone.objects.all() 
-#     serializer_class = PhoneSerializer
-#     lookup_field = 'phone_number'
-    
-# class LookUpReadUpdateDeleteView(RetrieveUpdateDestroyAPIView): 
-#     queryset = PeoplePhone.objects.all()
-#     serializer_class = PhoneSerializer
-#     lookup_field = 'phone_number'
     
 class LookupPhoneView(GenericAPIView):
     serializer_class = PhoneSerializer
@@ -46,19 +34,6 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = PeoplePhone.objects.all()
     serializer_class = PhoneSerializer
-    
-    
-'''class UserCountView(APIView):
-    """
-    A view that returns the count of active users in JSON.
-    """
-    renderer_classes = (JSONRenderer, )
 
-    def get(self, request, format=None):
-        user_count = User.objects.filter(active=True).count()
-        content = {'user_count': user_count}
-        return Response(content)'''
-    
-    
     
     

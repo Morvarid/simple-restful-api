@@ -11,5 +11,5 @@ from .models import PeoplePhone
 class PhoneSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PeoplePhone
-        fields = ('id','url','name', 'phone_number')
+        fields = ('id','url','name', 'mobile_phone')
         
