@@ -31,7 +31,7 @@ class LookupPhoneView(GenericAPIView):
     def get_queryset(self):
         queryset = PeoplePhone.objects.all()
         mobile_phone = self.request.query_params.get('mobile_phone', None)
-        queryset = queryset.filter(phone_number=mobile_phone)
+        queryset = queryset.filter(mobile_phone=mobile_phone)
         return queryset
     
     def get(self, request):
